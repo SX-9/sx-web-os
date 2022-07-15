@@ -1,0 +1,17 @@
+dialog {
+    background-color: #1a1a1a;
+    border: 1px solid #105888;
+    padding: 10px;
+    width: 400px;
+    color: white;
+    animation: fade 0.5s ease-in-out;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
