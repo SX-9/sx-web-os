@@ -1,0 +1,9 @@
+body {
+    cursor: wait;
+}
+span {
+    color: green;
+}
+progress {
+    width: 15rem;
+}

@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../files/css/default.css">
     <link rel="stylesheet" href="../../files/css/setupDefault.css">
-    <script defer src="../../files/js/setup1.js"></script>
+    <link rel="stylesheet" href="../../files/css/install1.css">
     <link rel="icon" href="../../files/images/favicon.png" type="image/x-icon">
-    <title>CheckMateOS - Setup</title>
+    <script derfer src="../../files/js/install1.js"></script>
+    <title>CheckMateOS - Installer</title>
 </head>
 <body>
     <dialog open id="setupWindow">
-        <h1>Comming Soon</h1>
+        <h1>Installing</h1>
         <p>
-            This OS Is Not Finished Yet! But It Will Be Soon!
+            Do Not Close This Window.<br><br><br>
+            <span id="installerMess"></span>
         </p>
-        <br>
+        <progress value="0" max="100" id="installerBar"></progress>
     </dialog>
 </body>
 </html>

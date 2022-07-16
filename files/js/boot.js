@@ -1,4 +1,6 @@
-let mess = new URLSearchParams(window.location.search).get('mess') || 'Starting';
+let params = new URLSearchParams(window.location.search);
+let mess  = params.get('mess') || 'Starting';
+let redirect = params.get('redirect') || '../../os-screens/setup/1.html';
 
 document.getElementById('loaderMess').innerText = mess;
 setTimeout(() => {
@@ -20,6 +22,6 @@ setTimeout(() => {
     if (window.innerWidth < 768) {
         window.location.href = '../../os-screens/errors/mobile.html';
     } else {
-        window.location.href = '../../os-screens/setup/1.html'
+        window.location.href = redirect;
     }
 }, 7000);

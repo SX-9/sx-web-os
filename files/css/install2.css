@@ -1,0 +1,15 @@
+body {
+    background-image: url(../../files/images/bgInstaller.jpg);
+    background-size: cover; 
+    background-position: center;  
+    background-repeat: no-repeat; 
+}
+
+input {
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-bottom-left-radius: 1em;
+    border-top-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-top-right-radius: 1em;
+}
