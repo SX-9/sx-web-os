@@ -8,5 +8,5 @@ setTimeout(() => {
     document.getElementById('installMess').innerText = 'Passing Data...';
 }, 13000);
 setTimeout(() => {
-    window.location.href = '../locked/screen.html' + window.location.search;
+    window.location.href = '../main/locked.html' + window.location.search;
 }, 15000);

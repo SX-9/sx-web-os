@@ -2,6 +2,13 @@ let params = new URLSearchParams(window.location.search);
 let mess  = params.get('mess') || 'Starting';
 let redirect = params.get('redirect') || '../../os-screens/setup/1.html';
 
+if (!redirect && localStorage.getItem('setup')) {
+    redirect = '../../os-screens/main/locked.html';
+}
+if (params.get('setup') === 'done') {
+    localStorage.setItem('setup', 'done');
+}
+
 document.getElementById('loaderMess').innerText = mess;
 setTimeout(() => {
     document.getElementById('loaderBar').value = 10;

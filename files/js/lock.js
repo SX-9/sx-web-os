@@ -8,7 +8,7 @@ localStorage.setItem('pass', pass);
 document.getElementById('user').innerText = user;
 document.getElementById('unlock').onclick = () => {
     if (document.getElementById('password').value === pass) {
-        window.location.href = '../desktop/main.html' + window.location.search;
+        window.location.href = '../main/desktop.html' + window.location.search;
     } else {
         document.getElementById('password').value = '';
         alert('Wrong Password');

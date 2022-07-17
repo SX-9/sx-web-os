@@ -1,0 +1,133 @@
+div#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(../../files/images/bgDesktop.jpg);
+    background-color: #00000000;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+h1 {
+    color: white;
+}
+dialog {
+    border: 1px white solid
+}
+dialog#window {
+    border: none;
+    background-color: #00000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+iframe {
+    border: none;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+img {
+    border-radius: 50%;
+    width: 7em;
+}
+dialog#startMenu {
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: black;
+    position: inherit;
+    width: 25em;
+    height: 75vh;
+}
+h2 {
+    margin: 0;
+}
+div#desktopIcons {
+    position: fixed;
+    top: 0.5em;
+    left: 0.5em;
+}
+div#battery {
+    position: fixed;
+    top: 0.5em;
+    right: 0.5em;
+}
+div#time {
+    position: fixed;
+    top: 5em;
+    right: 0.5em;
+}
+div.widget {
+    background-color: #5c83808b;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: max-content;
+    height: max-content;
+    padding: 1em;
+}
+div#taskbar {
+    border-bottom-left-radius: 1em;
+    border-top-left-radius: 1em;
+    position: fixed;
+    bottom: 0.5em;
+    left: 0.5em;
+    width: 100%;
+    height: 3em;
+    background-color: #2e84d53c;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+button {
+    margin: 0.5em;
+    padding: 0.5em;
+    border: none;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+button#close {
+    background-color: #ff0000;
+    display: none;
+}
+button.stOption {
+    background-color: #ff0000;
+}
+button#start {
+    background-color: #3f7bd6;
+}
+button.tbRight {
+    position: fixed;
+    right: 0.5em;
+}
+button.tbItem, button.stItem {
+    background-color: #8fc7ff;
+}

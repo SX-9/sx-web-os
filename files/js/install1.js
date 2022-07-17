@@ -19,5 +19,5 @@ setTimeout(() => {
     document.getElementById('installerMess').innerText = 'Restarting...';
 }, 6000);
 setTimeout(() => {
-    window.location.href = '../../?mess=Restarting&redirect=os-screens/setup/6.html';
+    window.location.href = '../../?mess=Restarting&redirect=os-screens/setup/6.html&setup=done';
 }, 7000);
