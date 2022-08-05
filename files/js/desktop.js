@@ -3,6 +3,7 @@ let taskbarItem1 = document.getElementById("tb1");
 let taskbarItem2 = document.getElementById("tb2");
 let taskbarItem3 = document.getElementById("tb3");
 let taskbarItem4 = document.getElementById("tb4");
+let taskbarItem5 = document.getElementById("tb5");
 let startItem1 = document.getElementById("st1");
 let startItem2 = document.getElementById("st2");
 let startItem3 = document.getElementById("st3");
@@ -21,7 +22,7 @@ if (localStorage.getItem("wallpaper")) {
 }
 setInterval(() => document.getElementById("clock").innerText = new Date().toLocaleTimeString(), 500);
 document.getElementById("username").innerText = user;
-document.getElementById("tb4").innerText = new Date().toLocaleDateString();
+document.getElementById("tb6").innerText = new Date().toLocaleDateString();
 setInterval(() => {
     navigator.getBattery().then(battery => {
         if (battery.level < 0.2) {
@@ -96,6 +97,17 @@ taskbarItem1.addEventListener("click", () =>
     openWindow("https://sx9.is-a.dev/pwa/calc.html", 27, 37)
 );
 
-taskbarItem2.addEventListener("click", () => {
+taskbarItem2.addEventListener("click", () => 
     openWindow("https://x-cord-client.sx9.repl.co", 37, 27)
-});
+);
+
+taskbarItem3.addEventListener("click", () =>
+    openWindow("timer.html", 27, 27)
+);
+taskbarItem4.addEventListener("click", () =>
+    openWindow("cmd.html" + window.location.search, 57, 27)
+);
+
+taskbarItem5.addEventListener("click", () =>
+    openWindow("about.html", 27, 27)
+);

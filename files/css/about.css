@@ -1,0 +1,23 @@
+body {
+    background-color: #000000;
+    color: #fff;
+    font-family: sans-serif;
+}
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+button {
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 0;
+    margin-bottom: 0;
+}

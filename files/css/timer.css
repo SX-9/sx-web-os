@@ -1,0 +1,32 @@
+body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+button {
+    width: 3em;
+    height: 3em;
+    font-size: 1.7rem;
+    font-weight: lighter;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 5px;
+}
+button#start {
+    background-color: #0d6314;
+    color: #11ff00;
+}
+button#stop {
+    background-color: #640c0c;
+    color: #ff0000;
+}
