@@ -16,8 +16,11 @@ div#bg {
     background-position: center;
     background-repeat: no-repeat;
 }
-h1 {
+h1, p {
     color: white;
+}
+p {
+    margin-top: 0;
 }
 dialog {
     border: 1px white solid
@@ -121,6 +124,10 @@ button {
     border-bottom-right-radius: 1em;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
+}
+button:hover {
+    transform: scale(1.1) translateY(-0.3em);
+    box-shadow: 0 0 0.3em 0.3em #ffffff99;
 }
 button#close {
     background-color: #ff0000;

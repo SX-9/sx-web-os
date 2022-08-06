@@ -2,8 +2,6 @@ let params = new URLSearchParams(window.location.search);
 let mess  = params.get('mess') || 'Starting';
 let redirect = params.get('redirect') || '../../os-screens/setup/1.html';
 
-document.body.requestFullscreen();
-
 document.getElementById('loaderMess').innerText = mess;
 setTimeout(() => {
     document.getElementById('loaderBar').value = 10;

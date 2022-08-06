@@ -14,6 +14,20 @@ let batteryWidget = document.getElementById("battery");
 let batteryMess = document.getElementById("btMess");
 let batteryPercent = document.getElementById("btPercent");
 
+document.addEventListener('keydown', (e) => {
+    if (e.keyCode == 70) {
+        if (document.documentElement.requestFullscreen) {
+            document.documentElement.requestFullscreen();
+        } else if (document.documentElement.mozRequestFullScreen) { 
+            document.documentElement.mozRequestFullScreen();
+        } else if (document.documentElement.webkitRequestFullscreen) {
+            document.documentElement.webkitRequestFullscreen();
+        } else if (document.documentElement.msRequestFullscreen) {
+            document.documentElement.msRequestFullscreen();
+        } 
+    }
+});
+
 if (params.get("user")) {
     localStorage.setItem("user", params.get("user"));
 }
@@ -24,15 +38,19 @@ setInterval(() => document.getElementById("clock").innerText = new Date().toLoca
 document.getElementById("username").innerText = user;
 document.getElementById("tb6").innerText = new Date().toLocaleDateString();
 setInterval(() => {
-    navigator.getBattery().then(battery => {
-        if (battery.level < 0.2) {
-            batteryWidget.style.backgroundColor = "#f51e1e60";
-        } else {
-            batteryWidget.style.backgroundColor = "#1ef56d60";
-        }
-        batteryMess.innerText = battery.charging ? "Charging" : "Discharging";
-        batteryPercent.innerText = battery.level * 100 + "%";
-    });
+    if (navigator.getBattery) {
+        navigator.getBattery().then(battery => {
+            if (battery.level < 0.2) {
+                batteryWidget.style.backgroundColor = "#f51e1e60";
+            } else {
+                batteryWidget.style.backgroundColor = "#1ef56d60";
+            }
+            batteryMess.innerText = battery.charging ? "Charging" : "Discharging";
+            batteryPercent.innerText = battery.level * 100 + "%";
+        });
+    } else {
+        batteryWidget.style.display = "none";
+    }
 }, 500);
 
 document.getElementById("wallpaper").addEventListener("click", () => {
