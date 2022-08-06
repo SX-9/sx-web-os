@@ -6,11 +6,18 @@ localStorage.setItem('user', user);
 localStorage.setItem('pass', pass);
 
 document.getElementById('user').innerText = user;
-document.getElementById('unlock').onclick = () => {
+var unlock = () => {
     if (document.getElementById('password').value === pass) {
         window.location.href = '../main/desktop.html' + window.location.search;
     } else {
         document.getElementById('password').value = '';
         alert('Wrong Password');
+    }
+}
+
+document.getElementById('unlock').onclick = unlock;
+window.onkeydown = (e) => {
+    if (e.keyCode === 13) {
+        unlock();
     }
 }
