@@ -30,6 +30,9 @@ setTimeout(() => {
     }
 }, 7000);
 
-if (params.get('setup') === 'done') {
-    localStorage.setItem('setup', 'done');
-}
+//add an event listener if the user leaves the site
+window.addEventListener('beforeunload', (e) => {
+    if (params.get('setup') === 'done') {
+        localStorage.setItem('setup', 'done');
+    }
+});

@@ -12,8 +12,8 @@ p { all: unset; }
 div#cmd { display: flex; }
 input {
     all: unset;
-    margin: 0.5erem;
-    width: max-content;
+    margin: 0.5rem;
+    width: 10em;
     height: 1em;
     background: #000;
     color: #fff;

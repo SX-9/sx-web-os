@@ -17,13 +17,21 @@ div#bg {
     background-repeat: no-repeat;
 }
 h1 {
-    color: #8ae8ff;
+    background-color: #2e84d58b;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    color: #ffffff;
+    font-size: 3em;
 }
 img {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
     width: 10em;
     border-radius: 50%;
 }
 input {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
     width: 20em;
     height: 2em;
     border: none;
@@ -34,6 +42,8 @@ input {
     border-top-left-radius: 1em;
 }
 button {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
     height: 2em;
     width: 3em;
     border: none;
@@ -42,4 +52,12 @@ button {
     color: #ffffff;
     border-bottom-right-radius: 1em;
     border-top-right-radius: 1em;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

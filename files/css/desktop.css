@@ -47,6 +47,8 @@ img {
     width: 7em;
 }
 dialog#startMenu {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
     border-top-left-radius: 1em;
@@ -64,9 +66,11 @@ h2 {
     margin: 0;
 }
 div#desktopIcons {
+    opacity: 0;
     position: fixed;
     top: 0.5em;
     left: 0.5em;
+    animation: fadeLeft 1.3s ease-in-out forwards;
 }
 div#battery {
     position: fixed;
@@ -79,6 +83,8 @@ div#time {
     right: 0.5em;
 }
 div.widget {
+    opacity: 0;
+    animation: fadeRight 1.3s ease-in-out forwards;
     background-color: #5c83808b;
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
@@ -93,6 +99,8 @@ div.widget {
     padding: 1em;
 }
 div#taskbar {
+    opacity: 0;
+    animation: fadeUp 1.3s ease-in-out forwards;
     border-bottom-left-radius: 1em;
     border-top-left-radius: 1em;
     position: fixed;
@@ -130,4 +138,42 @@ button.tbRight {
 }
 button.tbItem, button.stItem {
     background-color: #8fc7ff;
+}
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
