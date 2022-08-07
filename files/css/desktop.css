@@ -26,6 +26,7 @@ dialog {
     border: 1px white solid
 }
 dialog#window {
+    resize: both;
     border: none;
     background-color: #00000000;
     display: flex;
