@@ -26,7 +26,7 @@ dialog {
     border: 1px white solid
 }
 dialog#window {
-    resize: vertical;
+    resize: horizontal;
     overflow: auto;
     border: none;
     background-color: #00000000;
@@ -147,6 +147,10 @@ button.tbRight {
 }
 button.tbItem, button.stItem {
     background-color: #8fc7ff;
+}
+::-webkit-resizer {
+    background-color: #28523d;
+    outline: 2px dashed #90b7eb;
 }
 @keyframes fadeLeft {
     from {
