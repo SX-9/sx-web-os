@@ -13,6 +13,11 @@ let user = localStorage.getItem("user") || params.get("user");
 let batteryWidget = document.getElementById("battery");
 let batteryMess = document.getElementById("btMess");
 let batteryPercent = document.getElementById("btPercent");
+let developerWidget = document.getElementById("developer");
+
+if (localStorage.getItem("dev") === "true") { 
+    developerWidget.style.display = "block";
+}
 
 document.addEventListener('keydown', (e) => {
     if (e.keyCode == 70) {
@@ -25,6 +30,25 @@ document.addEventListener('keydown', (e) => {
         } else if (document.documentElement.msRequestFullscreen) {
             document.documentElement.msRequestFullscreen();
         } 
+    }
+    if (e.keyCode === 91) {
+        document.getElementById("startMenu").showModal();
+        document.getElementById("startMenu").style.display = "flex";
+    } else if (e.keyCode === 68) {
+        let confirmation = confirm("Enable Developer Mode?");
+        if (confirmation) {
+            localStorage.setItem("dev", "true");
+            location.reload();
+        }
+    } else if (e.keyCode === 27) {
+        document.getElementById("window").close();
+        document.getElementById("content").src = "";
+        document.getElementById("close").style.display = "none";
+    } else if (localStorage.getItem("dev") === "true") {
+        if (e.keyCode === 75) {
+            window.location.href = "../errors/bsod.html";
+        }
+
     }
 });
 
@@ -62,7 +86,6 @@ document.getElementById("wallpaper").addEventListener("click", () => {
         alert("Invalid URL");
     }
 });
-
 
 const openWindow = (src, width, height) => {
     let window = document.getElementById("window");

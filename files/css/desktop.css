@@ -77,17 +77,9 @@ div#desktopIcons {
     left: 0.5em;
     animation: fadeLeft 1.3s ease-in-out forwards;
 }
-div#battery {
-    position: fixed;
-    top: 0.5em;
-    right: 0.5em;
-}
-div#time {
-    position: fixed;
-    top: 5em;
-    right: 0.5em;
-}
 div.widget {
+    position: fixed;
+    right: 0.5em;
     opacity: 0;
     animation: fadeRight 1.3s ease-in-out forwards;
     background-color: #5c83808b;
@@ -103,6 +95,14 @@ div.widget {
     height: max-content;
     padding: 1em;
 }
+div#battery { top: 0.5em; }
+div#time { top: 5em; }
+div#developer { 
+    display: none;
+    top: 10em; 
+    background-color: #d364648b;
+}
+
 div#taskbar {
     opacity: 0;
     animation: fadeUp 1.3s ease-in-out forwards;
@@ -118,6 +118,10 @@ div#taskbar {
     align-items: center;
     flex-direction: row;
 }
+
+table { background-color: #000000; }
+td { border: 2px white solid; padding: 0.3em; }
+
 button {
     margin: 0.5em;
     padding: 0.5em;

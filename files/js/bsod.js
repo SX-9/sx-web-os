@@ -1,0 +1,1 @@
+setTimeout(() => window.location.href = "../../index.html?mess=Fixing", 5000);
