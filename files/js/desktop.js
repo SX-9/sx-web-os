@@ -4,6 +4,7 @@ let taskbarItem2 = document.getElementById("tb2");
 let taskbarItem3 = document.getElementById("tb3");
 let taskbarItem4 = document.getElementById("tb4");
 let taskbarItem5 = document.getElementById("tb5");
+let taskbarItem6 = document.getElementById("tb6");
 let startItem1 = document.getElementById("st1");
 let startItem2 = document.getElementById("st2");
 let startItem3 = document.getElementById("st3");
@@ -14,6 +15,17 @@ let batteryWidget = document.getElementById("battery");
 let batteryMess = document.getElementById("btMess");
 let batteryPercent = document.getElementById("btPercent");
 let developerWidget = document.getElementById("developer");
+let openWindow = (src, width, height) => {
+    let window = document.getElementById("window");
+    let iframe = document.getElementById("content");
+    let exit = document.getElementById("close");
+    window.showModal();
+    window.display = "flex";
+    window.style.width = width + "em";
+    window.style.height = height + 2 + "em";
+    exit.style.display = "block";
+    iframe.src = src;
+}
 
 if (localStorage.getItem("dev") === "true") { 
     developerWidget.style.display = "block";
@@ -47,8 +59,10 @@ document.addEventListener('keydown', (e) => {
     } else if (localStorage.getItem("dev") === "true") {
         if (e.keyCode === 75) {
             window.location.href = "../errors/bsod.html";
+        } else if (e.keyCode === 83) {
+            document.getElementById("window").remove();
+            delete openWindow;
         }
-
     }
 });
 
@@ -60,7 +74,7 @@ if (localStorage.getItem("wallpaper")) {
 }
 setInterval(() => document.getElementById("clock").innerText = new Date().toLocaleTimeString(), 500);
 document.getElementById("username").innerText = user;
-document.getElementById("tb6").innerText = new Date().toLocaleDateString();
+document.getElementById("date").innerText = new Date().toLocaleDateString();
 setInterval(() => {
     if (navigator.getBattery) {
         navigator.getBattery().then(battery => {
@@ -87,19 +101,11 @@ document.getElementById("wallpaper").addEventListener("click", () => {
     }
 });
 
-const openWindow = (src, width, height) => {
-    let window = document.getElementById("window");
-    let iframe = document.getElementById("content");
-    let exit = document.getElementById("close");
-    window.showModal();
-    window.style.width = width + "em";
-    window.style.height = height + 2 + "em";
-    exit.style.display = "block";
-    iframe.src = src;
-}
+
 
 document.getElementById("close").addEventListener("click", () => {
     document.getElementById("window").close();
+    document.getElementById("window").display = "none";
     document.getElementById("content").src = "";
     document.getElementById("close").style.display = "none";
 });
@@ -151,4 +157,7 @@ taskbarItem4.addEventListener("click", () =>
 
 taskbarItem5.addEventListener("click", () =>
     openWindow("about.html", 27, 27)
+);
+taskbarItem6.addEventListener("click", () =>
+    openWindow("edit.html", 57, 27)
 );

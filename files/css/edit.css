@@ -1,0 +1,56 @@
+body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    font-family: sans-serif;
+    color: white;
+    display: grid;
+    grid-template-areas: "buttons buttons" "editor output";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3em 1fr;
+}
+
+h1 { margin: 0.2em; }
+
+div#buttons { 
+    display: flex;
+    grid-area: "buttons";
+}
+
+button { 
+    all: unset;
+    margin: 0.1em;
+    padding: 0.7em;
+    background-color: #29d51a;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+div#input { 
+    width: 50%;
+    grid-area: "editor";
+}
+
+div#output { 
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 49%;
+    height: 83%;
+    grid-area: "output";
+    background-color: darkgrey;
+}
+
+textarea { 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 81%;
+}
+

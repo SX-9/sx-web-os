@@ -27,13 +27,17 @@ dialog {
 }
 dialog#window {
     resize: horizontal;
-    overflow: auto;
+    overflow: none;
     border: none;
-    background-color: #00000000;
-    display: flex;
+    display: hide;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-radius: 21px;
+    background: linear-gradient(145deg, #a6a6a6, #c5c5c5);
+    box-shadow:  
+        5px 5px 9px #9c9c9c,
+        -5px -5px 9px #d4d4d4;
 }
 iframe {
     border: none;
@@ -45,7 +49,7 @@ iframe {
     padding: 0;
     margin: 0;
     width: 100%;
-    height: 100%;
+    height: 87%;
 }
 img {
     border-radius: 50%;
